@@ -1,0 +1,9 @@
+// variables ,functions & mixin
+@use "./layout/var.scss" as *;
+@use "./layout/mixin.scss" as *;
+@use "./layout/functions.scss" as *;
+
+// import glopal rules
+@use "./layout/glopal-rules";
+
+

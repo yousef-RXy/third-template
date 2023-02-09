@@ -1,0 +1,7 @@
+@function topSpace($sizes...) {
+	$total: 0;
+	@each $size in $sizes {
+		$total: $total + $size;
+	}
+	@return $total;
+}
