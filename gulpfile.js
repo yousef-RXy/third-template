@@ -22,10 +22,11 @@ html = () =>
 exports.html = html;
 // css tasks
 styles = () =>
+	// { outputStyle: "compressed" }
 	gulp
 		.src("./src/sass/*.scss")
 		.pipe(sourcemaps.init())
-		.pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+		.pipe(sass().on("error", sass.logError))
 		.pipe(prefix("last 2 versions"))
 		.pipe(sourcemaps.write("."))
 		.pipe(gulp.dest("./dist/css"))

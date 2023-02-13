@@ -5,3 +5,166 @@
 
 // import glopal rules
 @use "./layout/glopal-rules";
+
+header {
+	box-shadow: 0 0 10px #ddd;
+	position: relative;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		position: relative;
+		.logo {
+			color: $mainColor;
+			font-size: 26px;
+			font-weight: 600;
+			height: 72px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.nav {
+			display: flex;
+			> li {
+				> a {
+					height: 72px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: relative;
+					overflow: hidden;
+					padding: 0 30px;
+					font-size: 18px;
+					transition: $mainTransition;
+				}
+				> a::before {
+					content: "";
+					width: 100%;
+					position: absolute;
+					height: 4px;
+					background-color: $mainColor;
+					top: 0;
+					left: -100%;
+					transition: $mainTransition;
+				}
+				a:hover {
+					background-color: #fafafa;
+					color: $mainColor;
+				}
+				a:hover::before {
+					left: 0;
+				}
+			}
+			> li:hover .mega__menu {
+				opacity: 1;
+				z-index: 100;
+				top: calc(100% + 1px);
+			}
+			.mega__menu {
+				z-index: -1;
+				display: flex;
+				gap: 40px;
+				top: calc(100% + 50px);
+				opacity: 0;
+				position: absolute;
+				width: 100%;
+				left: 0;
+				padding: 30px;
+				background-color: white;
+				border-bottom: 3px solid $mainColor;
+				transition: top $mainTransition, opacity $mainTransition;
+				.image img {
+					max-width: 100%;
+				}
+				ul {
+					display: flex;
+					flex-direction: column;
+					min-width: 250px;
+					flex: 1;
+					li {
+						a {
+							color: $mainColor;
+							padding: 15px;
+							display: block;
+							font-size: 18px;
+							font-weight: bold;
+						}
+						.fa-fw {
+							margin-right: 10px;
+						}
+					}
+					li:not(:last-child) {
+						border-bottom: 1px solid #e9e6e6;
+					}
+				}
+			}
+		}
+	}
+}
+.landing {
+	position: relative;
+	.container {
+		position: relative;
+		.tex {
+		}
+		.image {
+			img {
+				position: relative;
+				width: 600px;
+			}
+		}
+		.go-down {
+			.fas {
+			}
+		}
+	}
+}
+@media (max-width: $smallScreens) {
+	header {
+		.container {
+			.logo {
+				width: 100%;
+				height: 50px;
+			}
+			.nav {
+				margin: auto;
+				> li {
+					a {
+						height: 50px;
+						padding: 0 10px;
+						font-size: 16px;
+					}
+				}
+				.mega__menu {
+					flex-direction: column;
+					padding: 5px;
+					gap: 0px;
+					.links:first-of-type li:last-child {
+						border-bottom: 1px solid #e9e6e6;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: $mediumScreens) {
+	header .container .nav .mega__menu .image img {
+		display: none;
+	}
+}
+@media (min-width: $smallScreens) {
+	.container {
+		width: 750px;
+	}
+}
+@media (min-width: $mediumScreens) {
+	.container {
+		width: 970px;
+	}
+}
+@media (min-width: $bigScreens) {
+	.container {
+		width: 1170px;
+	}
+}

@@ -9,10 +9,78 @@ html(lang="en")
     block style
       include includes/styles
     block title
-      title Jousef
+      title Jouserf
   body 
     block content
-    
+      header 
+        .container 
+          a.logo(href="#") Yousef 
+          ul.nav
+            li
+              a(href="#") Articles
+            li
+              a(href="#") Gallery
+            li
+              a(href="#") Features
+            li
+              a(href="#") Other Links 
+              .mega__menu 
+                .image 
+                  img(src="./imgs/megamenu.png", alt="")
+                ul.links
+                  li
+                    a(href="#")
+                      i(class="far fa-comments fa-fw")
+                      | Testimonials
+                  li
+                    a(href="#")
+                      i(class="far fa-user fa-fw")
+                      | Team Members
+                  li
+                    a(href="#")
+                      i(class="far fa-building fa-fw")
+                      | Services
+                  li
+                    a(href="#")
+                      i(class="far fa-check-circle fa-fw")
+                      | Our Skills
+                  li
+                    a(href="#")
+                      i(class="far fa-clipboard fa-fw")
+                      | How It Works
+                ul.links
+                  li
+                    a(href="#")
+                      i(class="far fa-calendar-alt fa-fw")
+                      | Events
+                  li
+                    a(href="#")
+                      i(class="fas fa-server fa-fw")
+                      | Pricing Plans
+                  li
+                    a(href="#")
+                      i(class="far fa-play-circle fa-fw")
+                      | Top Videos
+                  li
+                    a(href="#")
+                      i(class="far fa-chart-bar fa-fw")
+                      | Stats
+                  li
+                    a(href="#")
+                      i(class="fa fa-percent fa-fw")
+                      | Request A Discount
+      main 
+        .landing 
+          .container 
+            .text 
+              h1 Welcome, To Elzero World
+              p Here Iam gonna share everything about my life. Books Iam reading, Games Iam Playing, Stories and Events
+            .image 
+              img(src="./imgs/landing-image.png", alt="landing-photo")
+            a(href="#articles" class="go-down") 
+              i(class="fas fa-angle-double-down fa-2x")
+          
+          
     block scripts
       include includes/scripts
     
